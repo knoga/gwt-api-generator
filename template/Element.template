@@ -1,9 +1,7 @@
 <%= disclaimer() %>
 package <%= ns %>;
 
-import elemental2.dom.*;
-import elemental2.core.*;
-import com.vaadin.polymer.elemental.PolymerHTMLElement;
+import elemental2.dom.HTMLElement;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArray;
 import jsinterop.annotations.JsOverlay;
@@ -14,7 +12,7 @@ import jsinterop.annotations.JsType;
  * <%= getDescription(' ') %>
  */
 @JsType(isNative=true)
-public class <%= elementClassName() %> extends <%= base ? base : 'PolymerHTMLElement' %> {
+public class <%= elementClassName() %> extends <%= base ? base : 'HTMLElement' %> {
 
     @JsOverlay public static final String TAG = "<%= name %>";
     @JsOverlay public static final String SRC = "<%= path %>";
