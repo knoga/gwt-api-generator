@@ -8,11 +8,12 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import elemental2.dom.Element;
+import elemental2.dom.Event;
 
 /**
  * <%= getDescription(' ') %>
  */
-@JsType(isNative=true, namespace = JsPackage.GLOBAL, name="Event")
+@JsType(isNative=true)
 public class <%= camelCase(name) %>Event extends Event {
 
     @JsOverlay static final String NAME = "<%= computeName(name) %>";
