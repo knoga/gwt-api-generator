@@ -1,19 +1,19 @@
 <%= disclaimer() %>
 package <%= ns %>.event;
 
-import com.vaadin.polymer.elemental.*;
 import com.google.gwt.core.client.JsArray;
 import com.google.gwt.core.client.JavaScriptObject;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import elemental2.dom.Element;
 
 /**
  * <%= getDescription(' ') %>
  */
-@JsType(isNative=true)
-public interface <%= camelCase(name) %>Event extends Event {
+@JsType(isNative=true, namespace = JsPackage.GLOBAL, name="Event")
+public class <%= camelCase(name) %>Event extends Event {
 
     @JsOverlay static final String NAME = "<%= computeName(name) %>";
 <% if (hasParams()) { %>
