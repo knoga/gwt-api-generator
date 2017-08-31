@@ -15,7 +15,7 @@ import elemental2.dom.EventTarget;
 /**
  * <%= getDescription(' ') %>
  */
-@JsType(isNative=true)
+@JsType(isNative=true, namespace=JsPackage.GLOBAL, name="Event")
 public class <%= camelCase(name) %>Event extends Event {
 
     @JsOverlay public static final String NAME = "<%= computeName(name) %>";
