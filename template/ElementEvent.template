@@ -18,7 +18,7 @@ import elemental2.dom.EventTarget;
 @JsType(isNative=true)
 public class <%= camelCase(name) %>Event extends Event {
 
-    @JsOverlay static final String NAME = "<%= computeName(name) %>";
+    @JsOverlay public static final String NAME = "<%= computeName(name) %>";
 
     public <%= camelCase(name) %>Event(EventInit eventInitDict) {
         super(NAME, eventInitDict);
@@ -31,7 +31,7 @@ public class <%= camelCase(name) %>Event extends Event {
 <% if (hasParams()) { %>
     @Override
     @JsProperty
-    Detail getDetail();
+    public native Detail getDetail();
 
     @JsType(isNative=true)
     interface Detail extends Event.Detail {
