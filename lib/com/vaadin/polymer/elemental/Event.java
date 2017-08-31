@@ -2,6 +2,8 @@ package com.vaadin.polymer.elemental;
 
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import elemental2.dom.EventInit;
+import elemental2.dom.EventTarget;
 
 import static jsinterop.annotations.JsPackage.GLOBAL;
 

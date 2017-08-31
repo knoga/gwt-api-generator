@@ -9,6 +9,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import elemental2.dom.Element;
 import com.vaadin.polymer.elemental.Event;
+import elemental2.dom.EventInit;
+import elemental2.dom.EventTarget;
 
 /**
  * <%= getDescription(' ') %>
