@@ -34,7 +34,7 @@ public class <%= camelCase(name) %>Event extends Event {
     public native Detail getDetail();
 
     @JsType(isNative=true)
-    interface Detail extends Event.Detail {
+    public interface Detail extends Event.Detail {
 <% _.forEach(params, function(param){ %>
         /**
          * <%= getDescription('         ', param) %>
