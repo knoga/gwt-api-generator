@@ -8,7 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import elemental2.dom.Element;
-import elemental2.dom.Event;
+import com.vaadin.polymer.elemental.Event;
 
 /**
  * <%= getDescription(' ') %>
@@ -17,6 +17,15 @@ import elemental2.dom.Event;
 public class <%= camelCase(name) %>Event extends Event {
 
     @JsOverlay static final String NAME = "<%= computeName(name) %>";
+
+    public <%= camelCase(name) %>Event(EventInit eventInitDict) {
+        super(NAME, eventInitDict);
+    }
+
+    public <%= camelCase(name) %>Event() {
+        super(NAME);
+    }
+
 <% if (hasParams()) { %>
     @Override
     @JsProperty

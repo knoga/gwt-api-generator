@@ -7,6 +7,15 @@ import static jsinterop.annotations.JsPackage.GLOBAL;
 
 @JsType(isNative=true, namespace=GLOBAL, name="Event")
 public class Event extends elemental2.dom.Event{
+
+    public Event(String type, EventInit eventInitDict) {
+        super(type, eventInitDict);
+    }
+
+    public Event(String type) {
+        super(type);
+    }
+
     @JsProperty
     public native String getType();
 
